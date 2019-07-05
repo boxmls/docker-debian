@@ -1,8 +1,12 @@
 #!/bin/sh
 
-echo "Building [boxmls/debian] image."
+_BRANCH=$(git rev-parse --symbolic-full-name --abbrev-ref HEAD);
+
+echo "Building [boxmls/debian:$_BRANCH] image."
 
 docker build \
-  --tag=boxmls/debian \
+  --no-cache=true \
+  --tag=boxmls/debian:${_BRANCH} \
   $(readlink -f $(pwd))
+
 
