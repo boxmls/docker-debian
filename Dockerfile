@@ -18,6 +18,7 @@ RUN           \
               apt-get install -y --force-yes apt-transport-https sudo nano apt-utils curl wget python build-essential && \
               apt-get install -y --force-yes htop man unzip vim socat telnet git && \
               apt-get install -y --force-yes libpcre3-dev libcurl3 libcurl3-dev lsyncd monit && \
+              apt-get install -y --force-yes openssh-server && \
               apt-get clean all
 
 RUN           \
